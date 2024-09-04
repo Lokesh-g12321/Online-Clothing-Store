@@ -1,0 +1,21 @@
+.about{
+    background-image: url(/assets/ab.jpg) ;
+    width: 1450px;
+    height: 1000px;
+    background-size: cover;
+
+}
+.container{
+    display: flex;
+    color: black;
+    
+    flex-direction: column;
+    width: 1200px;
+    height: 900px;
+    align-items: center
+
+}
+h1{
+    color: brown;
+
+}

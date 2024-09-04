@@ -1,0 +1,10 @@
+.pic{
+    display:block;
+    margin-bottom: 10px 20px;
+    padding-top: 30px;
+    background-image: url("/assets/shop.jpeg");
+    
+}
+h1 {
+    color: rgba(100, 14, 220, 0.408);
+}

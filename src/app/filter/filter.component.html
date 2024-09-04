@@ -1,0 +1,11 @@
+<div class="container">
+
+    <p>Filter:
+    <input type="radio" value="all" name="filter" [(ngModel)]="selectedButton" (change)="onradiobutton()" >
+    <label style="padding-right: 20px;">{{'All('+all+')'}}</label>
+    <input type="radio" value="Available" name="filter" [(ngModel)]="selectedButton" (change)="onradiobutton()">
+    <label style="padding-right: 20px;">{{'Available('+avail+')'}}</label>
+    <input type="radio" value="branded" name="filter" [(ngModel)]="selectedButton" (change)="onradiobutton()">
+    <label style="padding-right: 20px;">{{'Branded('+brand+')'}}</label>
+    </p>
+    </div>

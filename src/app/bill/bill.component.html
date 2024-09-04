@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Bill</h1>
+    <form [formGroup]="billForm" (ngSubmit)="calculateTotal()">
+      <div formArrayName="items">
+        <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" class="item">
+          <input formControlName="description" placeholder="Description" />
+          <input formControlName="quantity" type="number" placeholder="Quantity" (input)="calculateTotal()" />
+          <input formControlName="unitPrice" type="number" placeholder="Unit Price" (input)="calculateTotal()" />
+          <input formControlName="total" placeholder="Total"  />
+          <button type="button" (click)="removeItem(i)">Remove</button>
+        </div>
+      </div>
+      <button type="button" (click)="addItem()">Add Item</button>
+    </form>
+    <div class="totals">
+      <div><strong>Subtotal:</strong> {{ getSubtotal() | currency }}</div>
+      <div><strong>Tax (10%):</strong> {{ getTax() | currency }}</div>
+      <div><strong>Total:</strong> {{ getTotal() | currency }}</div>
+    </div>
+  </div>
+  

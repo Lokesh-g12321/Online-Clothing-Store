@@ -1,0 +1,18 @@
+.mid{
+    text-align: center;
+    display: flex;
+}
+/* .padd{
+    /* padding:0px 25px; */
+.container{
+    /* background-color:rgb(234, 229, 229); */
+    border-radius: 50px;
+}
+.ll{
+    padding-bottom: 57px;
+}
+.row{
+    display: flex;
+    flex-wrap: nowrap;
+   
+}

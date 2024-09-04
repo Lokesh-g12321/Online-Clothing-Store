@@ -1,0 +1,17 @@
+.search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search input[type="text"] {
+    display: inline-block;
+    width: 200px; /* adjust the width as needed */
+  }
+  
+  .search h1 {
+    display: inline-block;
+    margin-left: 10px; /* add some space between the input and h1 */
+  }
+  .changebg{
+    background-color: bisque;
+  }

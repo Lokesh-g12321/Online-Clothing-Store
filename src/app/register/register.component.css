@@ -1,0 +1,36 @@
+.container{
+    /* background-color: bisque; */
+    display: flex;
+    
+    flex-direction: column;
+    width: 500px;
+    height: 450px;
+    align-items: center
+}
+.details{
+    align-items: stretch;
+
+}
+.textcol{
+    color: #3e2723;
+    padding: 5px 5px;
+    align-items: center;
+    font-weight: 800;
+    font-stretch: expanded;
+}
+.btn{
+    width: 300px;
+    color: aliceblue;
+}
+input[type="text"] {
+    font-family:'Gill Sans';
+    font-size: 16px;
+}
+.bgmi
+
+{
+    padding: 250px 10px;
+    background-image: url(/assets/bgimg.jpeg) ;
+    background-repeat: no-repeat;
+   background-size: cover;
+}

@@ -1,0 +1,57 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    </head>
+<div class="navbar">
+    <div class="site-name">
+        <div class="row">
+            <div class="col">
+              <a [routerLink]="'/home'"><img class="imgr" [src]="lokilogo"></a>
+            </div>
+        
+            <div class="col" style="font-family:'Gill Sans';">
+                <!--   -->
+            </div>
+            <div class="input-container" [ngClass]="{colors : search != ''}">
+                <input
+                  class="input"
+                  name="text"
+                  type="text"
+                  placeholder="Search the ..." 
+                  [(ngModel)]="search"
+                />
+              <!-- </div> -->
+              
+            <!-- <div class="col" [ngClass]="{colors : search != ''}">
+                <input type="text" [(ngModel)]="search" placeholder="Search..."  style="background-color:antiquewhite;border:0cm;"> -->
+                
+                <p>{{search}}</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="site-menu">
+        <div class="row">
+            <div class="col">
+               <h5><b> <a [routerLink]="'/home'"><i class="fas fa-home fa-xl"></i></a></b></h5>
+            </div>
+            <div class="col">
+                <h5><b><a [routerLink]="'/aboutus'"><i class="fas fa-info-circle fa-xl" ></i></a></b></h5>
+            </div>
+            <div class="col">
+                <h5><b><a [routerLink]="'/contact'"><i class="fas fa-envelope fa-xl"></i></a></b></h5>
+            </div>
+            <div class="col">
+                <h5><b><a [routerLink]="'/cart'"><i class="fas fa-shopping-cart fa-xl"></i></a></b></h5>
+            </div>
+            <div class="col">
+                <h5><b><a type="button" (click)="onLogout()" [routerLink]="'/login'" style="border: 0cap;"> <i class="fas fa-sign-out-alt fa-xl"></i></a></b></h5>
+            </div>
+        </div>
+    </div>
+</div>

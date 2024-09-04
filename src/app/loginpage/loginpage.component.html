@@ -1,0 +1,37 @@
+<div class="bgmi">
+    <div class="container">
+      <h1>LOGIN</h1>
+      <br>
+      <br>
+      <form  id="loki" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="details">
+          <div class="row">
+            <div class="col">
+              <label class="textcol" style="color: #3e2723;">UserName:</label>
+            </div>
+            <div class="col">
+              <input type="text" placeholder="Login Id" formControlName="UserName" required>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <label class="textcol" style="color: #3e2723;">Password:</label>
+            </div>
+            <div class="col">
+              <input type="password" placeholder="Password" formControlName="Password" required>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <br>
+        <button type="submit" class="btn" style="background-color: #5d4037;">Login</button>
+      </form>
+      <a>Don't have an account yet?</a>
+      <a href="register" style="text-decoration: none; color: inherit;">Register Now</a>
+    </div>
+  </div>
+  <app-enddescription></app-enddescription>
+  <app-notification></app-notification>
+  

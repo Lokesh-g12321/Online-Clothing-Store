@@ -1,0 +1,64 @@
+<!-- <div *ngFor="let item of[1,2,3]">
+    <img src="/assets/black.webp">
+    <div>
+        <p>WRONG</p> -->
+<app-filter [all]="getAllProducts()" [avail]=" getAvailableProducts()" [brand]=" getWrognProducts()"
+    (radiobuttonselected)=" onFilterButton($event)"></app-filter>
+<div class="row">
+    <div class="col">
+        <ng-container *ngFor="let p of products">
+            <div *ngIf="productCountRadioButton ==='all' || productCountRadioButton === p.avail ">
+                <div class="container" [ngStyle]="{backgroundcolor:p.avail==='Available' ? 'green':'red'}">
+                    <div class="row ">
+                        <div class="col">
+                            <div class="image-container" style="padding: 0px 100px;"><img [src]="p.image">
+                            </div>
+                        </div>
+                        <div class="col">
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="product name">
+                                        <h1>{{p.name}}</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="details"><b>Price:</b>{{p.price}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="avail" [ngStyle]="{color:p.avail==='Available' ? 'green':'red'}">
+                                        <b>{{p.avail}}</b>
+                                        <div class="offer"><b>{{p.offer}}</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-success"
+                                        *ngIf="p.avail=='Available' ;else notify">ADD
+                                        TO CART</button>
+                                    <ng-template #notify>
+                                        <button type="button" class="btn btn-danger" >Notify Me</button>
+                                    </ng-template>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-warning">Show More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<br>
+<br>
+<app-enddescription></app-enddescription>
+<app-notification></app-notification>

@@ -1,0 +1,57 @@
+
+
+<!-- <app-header></app-header> -->
+<div class="bgmi">
+    <div class="container">
+        <form asp-action="Register" method="post" #custreg="ngForm" (ngSubmit)="onclickreg(custreg.value)">
+            <div style="padding-left: 175px;">
+            <label>Register</label></div>
+            <br>
+            <br>
+            <div class="details" >
+                <div class="row">
+                    <div class="col">
+                        <label class="textcol" style="color: #3e2723;">New Login Id:</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="Username" placeholder="New Username" class="form-control" [(ngModel)]="registerData.UserName" name="UserName" required >
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="textcol" style="color: #3e2723;">New Password:</label>
+                    </div>
+                    <div class="col">
+                        <input type="password" name="Password" placeholder="Password" class="form-control" [(ngModel)]="registerData.Password" name="Password" required >
+                      
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="textcol" style="color: #3e2723;">Confirm Password:</label>
+                    </div>
+                    <div class="col">
+                        <input type="password" name="ConfirmPassword" placeholder="Confirm Password" class="form-control" [(ngModel)]="registerData.CPassword" name="ConfirmPassword" required />
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div style="padding-left: 50px;">
+            <button type="submit" class="btn" style="background-color: #5d4037;" >Register</button>
+            </div>
+        </form>
+        <p>Already have an account!</p>
+        <a href="login" style="text-decoration: none;color: inherit;">Login</a>
+    </div>
+</div>
+<app-enddescription></app-enddescription>
+<app-notification></app-notification>
+
+<!-- @section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} -->
